@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/favorite_book_layout"
         android:layout_marginTop="20dp"
-        android:background="@drawable/favorite_book"
+        android:background="@drawable/favorite_book_2"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="90dp">
@@ -29,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name of the book"
+                android:textColor="@color/white"
                 android:fontFamily="@font/intrepid"
                 android:textSize="15dp"/>
             <TextView

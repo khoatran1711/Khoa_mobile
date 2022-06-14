@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/library_book_layout"
         android:layout_marginTop="20dp"
-        android:background="@drawable/library_book"
+        android:background="@drawable/library_book_2"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="90dp">
