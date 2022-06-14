@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 
 
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.FavoriteBookADapter;
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.My_coupons_Adapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Coupons;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.R;
 

@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment.CartFragment;
+import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment.LibraryFragment;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment.FavoriteFragment;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment.HistoryFragment;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment.HomeFragment;
@@ -110,7 +110,7 @@ public class NavigationBar extends AppCompatActivity implements NavigationView.O
         {
             if(currentFragment!=CART_FRAGMENT)
             {
-                replaceFragment(new CartFragment());
+                replaceFragment(new LibraryFragment());
                 currentFragment=CART_FRAGMENT;
             }
         }

@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.CartItemAdapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.FavoriteBookADapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.LibraryAdapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Book;
@@ -30,9 +29,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CartFragment extends Fragment {
+public class LibraryFragment extends Fragment {
     ArrayList<Product> products;
-    CartItemAdapter cartItemAdapter;
     RecyclerView cartItemRc;
     TextView total_price;
     Button btn_confirm;

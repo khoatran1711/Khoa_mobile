@@ -35,7 +35,7 @@ public class HistoryOrderAdapter extends  RecyclerView.Adapter<HistoryOrderAdapt
     @NonNull
     @Override
     public HistoryOrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.history_order,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.history_book_item,parent,false);
         return  new HistoryOrderViewHolder(view);
     }
 
@@ -60,20 +60,14 @@ public class HistoryOrderAdapter extends  RecyclerView.Adapter<HistoryOrderAdapt
     }
 
     public class HistoryOrderViewHolder extends RecyclerView.ViewHolder{
-        private final TextView nameOrder;
-        private final RecyclerView orderItemRc;
-        private final ConstraintLayout constraintLayout;
-        private final LinearLayout expandableLayout;
-        private final ImageView imgArrow;
-        private final CardView cardView;
+        private final TextView nameHistory, timeHistory, btnReadHistory;
+        private final ImageView imgHistory;
         public HistoryOrderViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameOrder=itemView.findViewById(R.id.history_order_name);
-            orderItemRc=itemView.findViewById(R.id.history_order_recycler_view);
-            constraintLayout=itemView.findViewById(R.id.history_order_constraint_layout);
-            expandableLayout=itemView.findViewById(R.id.history_order_expandable_layout);
-            imgArrow=itemView.findViewById(R.id.history_order_expandable_arrow);
-            cardView=itemView.findViewById(R.id.history_order_name_cv);
+            nameHistory=itemView.findViewById(R.id.history_book_name);
+            timeHistory=itemView.findViewById(R.id.history_book_time);
+            btnReadHistory=itemView.findViewById(R.id.btn_history_read_cont);
+            imgHistory=itemView.findViewById(R.id.history_book_img);
         }
     }
 }

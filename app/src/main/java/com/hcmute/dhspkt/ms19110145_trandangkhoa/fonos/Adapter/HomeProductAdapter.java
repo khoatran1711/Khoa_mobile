@@ -59,7 +59,7 @@ public class HomeProductAdapter extends  RecyclerView.Adapter<HomeProductAdapter
                 sheetView.findViewById(R.id.btn_add_to_library).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(context,"Added to Cart",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Added to Library",Toast.LENGTH_SHORT).show();
                         bottomSheetDialog.dismiss();
                     }
                 });
