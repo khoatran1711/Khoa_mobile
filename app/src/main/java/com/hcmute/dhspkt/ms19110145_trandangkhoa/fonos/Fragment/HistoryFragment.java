@@ -1,9 +1,7 @@
 package com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Fragment;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.HistoryOrderAdapter;
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Order;
+import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.HistoryReadingAdapter;
+import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Book;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Product;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.R;
 
@@ -24,8 +22,8 @@ import java.util.ArrayList;
 
 
 public class HistoryFragment extends Fragment {
-    private HistoryOrderAdapter historyOrderAdapter;
-    private ArrayList<Order> orders;
+    private HistoryReadingAdapter historyOrderAdapter;
+    private ArrayList<Book> historybooks;
     private RecyclerView historyRc;
     private Context context;
 
@@ -34,7 +32,7 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View history= inflater.inflate(R.layout.history_fragment,container,false);
         historyRc=history.findViewById(R.id.history_recycler_view);
-        orders =new ArrayList<>();
+        historybooks =new ArrayList<>();
 
         context = this.getActivity().getApplication();
 
@@ -59,8 +57,8 @@ public class HistoryFragment extends Fragment {
         products5.add(new Product(2,"Cake5",40000,R.drawable.drink1,""));
         products5.add(new Product(3,"Custard1",60000,R.drawable.custard1,""));
 
-        orders =new ArrayList<>();
-        historyOrderAdapter=new HistoryOrderAdapter(orders);
+        historybooks =new ArrayList<>();
+        historyOrderAdapter=new HistoryReadingAdapter( historybooks);
         historyRc.setAdapter(historyOrderAdapter);
         historyRc.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
         return history;

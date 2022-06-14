@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.FavoriteBookADapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.LibraryAdapter;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Book;
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Coupons;
+
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Product;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.R;
 
@@ -55,7 +55,7 @@ public class LibraryFragment extends Fragment {
         LibraryAdapter adapter1;
 
         lvlibraey_C = (RecyclerView) view.findViewById(R.id.C_categoty_listview);
-        List<Coupons> list1 = new ArrayList<>();
+
         adapter1 = new LibraryAdapter(this.getActivity(),list);
 
         lvlibraey_C.setAdapter(adapter1);

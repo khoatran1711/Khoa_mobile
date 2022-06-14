@@ -5,31 +5,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Order;
+import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Book;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Product;
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.R;
 
 import java.util.ArrayList;
 
 
-public class HistoryOrderAdapter extends  RecyclerView.Adapter<HistoryOrderAdapter.HistoryOrderViewHolder>{
-    private final ArrayList<Order> orders;
+public class HistoryReadingAdapter extends  RecyclerView.Adapter<HistoryReadingAdapter.HistoryOrderViewHolder>{
+    private final ArrayList<Book> history;
     private ArrayList<Product> products;
     private double totalOrderPrice;
 
 
-    public HistoryOrderAdapter(ArrayList<Order> orders) {
-        this.orders = orders;
+    public HistoryReadingAdapter(ArrayList<Book> orders) {
+        this.history = orders;
     }
 
     @NonNull
@@ -41,7 +37,7 @@ public class HistoryOrderAdapter extends  RecyclerView.Adapter<HistoryOrderAdapt
 
     @Override
     public void onBindViewHolder(@NonNull HistoryOrderViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        Order order = orders.get(position);
+        Book order = history.get(position);
         if(order ==null)
         {
             return;
@@ -52,9 +48,9 @@ public class HistoryOrderAdapter extends  RecyclerView.Adapter<HistoryOrderAdapt
 
     @Override
     public int getItemCount() {
-        if(orders !=null)
+        if(history !=null)
         {
-            return orders.size();
+            return history.size();
         }
         return 0;
     }

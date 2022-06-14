@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Adapter.FavoriteBookADapter;
-import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.Model.Coupons;
+
 import com.hcmute.dhspkt.ms19110145_trandangkhoa.fonos.R;
 
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class FavoriteFragment extends Fragment {
         FavoriteBookADapter adapter;
 
         lvfavorite = (ListView) view.findViewById(R.id.lv_fragment_favorite);
-        List<Coupons> list = new ArrayList<>();
+
         adapter = new FavoriteBookADapter(this.getActivity(), R.layout.favorite_book_item);
         lvfavorite.setAdapter(adapter);
         adapter.notifyDataSetChanged();
